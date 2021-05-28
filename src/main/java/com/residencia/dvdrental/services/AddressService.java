@@ -21,6 +21,22 @@ public class AddressService {
     }
 
     public Address save(Address address) {
+        Address newAddress = addressRepository.save(address);
+        if (newAddress.getAddressId() != null) {
+            return newAddress;
+        } else {
+            return null;
+        }
+    }
+
+    //Caso não tenha o @Id
+    public Address update(Address address, Integer id) {
+        address.setAddressId(id);
+        return addressRepository.save(address);
+    }
+
+    //Caso a instância recebida de Address tenha nela o @Id da entidade
+    public Address update(Address address) {
         return addressRepository.save(address);
     }
 }

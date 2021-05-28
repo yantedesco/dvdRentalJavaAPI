@@ -3,6 +3,7 @@ package com.residencia.dvdrental.entities;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Objects;
 
 public class FilmActorPK implements Serializable {
     private Short actorId;
@@ -26,5 +27,18 @@ public class FilmActorPK implements Serializable {
 
     public void setFilmId(Short filmId) {
         this.filmId = filmId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FilmActorPK that = (FilmActorPK) o;
+        return Objects.equals(actorId, that.actorId) && Objects.equals(filmId, that.filmId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(actorId, filmId);
     }
 }

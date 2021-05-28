@@ -35,7 +35,6 @@ public class Actor {
         this.firstName = firstName;
     }
 
-
     @Column(name = "last_name")
     public String getLastName() {
         return lastName;
