@@ -4,20 +4,17 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "film_category", schema = "public", catalog = "dvdrental")
+@Table(name = "film_category")
 @IdClass(FilmCategoryPK.class)
 public class FilmCategory {
 
-    @Id
     private Integer filmId;
-
-    @Id
     private Integer categoryId;
-
     private Timestamp lastUpdate;
     private Film filmByFilmId;
     private Category categoryByCategoryId;
 
+    @Id
     public Integer getFilmId() {
         return filmId;
     }
@@ -26,6 +23,7 @@ public class FilmCategory {
         this.filmId = filmId;
     }
 
+    @Id
     public Integer getCategoryId() {
         return categoryId;
     }
@@ -33,7 +31,6 @@ public class FilmCategory {
     public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
     }
-
 
     @Column(name = "last_update")
     public Timestamp getLastUpdate() {

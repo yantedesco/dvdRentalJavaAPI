@@ -12,7 +12,6 @@ public class Category {
     private Integer categoryId;
     private String name;
     private Timestamp lastUpdate;
-    private List<FilmCategory> filmCategoriesByCategoryId;
 
     @Id
     @Column(name = "category_id")
@@ -45,6 +44,7 @@ public class Category {
     }
 
     @OneToMany(mappedBy = "categoryByCategoryId")
+    private List<FilmCategory> filmCategoriesByCategoryId;
     public List<FilmCategory> getFilmCategoriesByCategoryId() {
         return filmCategoriesByCategoryId;
     }
