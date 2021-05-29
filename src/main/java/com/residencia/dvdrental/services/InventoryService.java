@@ -1,7 +1,6 @@
 package com.residencia.dvdrental.services;
 
 import com.residencia.dvdrental.entities.Inventory;
-import com.residencia.dvdrental.repositories.InventoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
