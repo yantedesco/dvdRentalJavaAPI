@@ -6,7 +6,7 @@
 <h1 align="center">💻Residência de Software</h1>
 <h2 align="center">Projeto 01 - dvdrental</h2>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <a href="https://github.com/estevao25">
