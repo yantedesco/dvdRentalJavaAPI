@@ -24,5 +24,4 @@ public class ActorController {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(actorService.findById(id),headers, HttpStatus.OK);
     }
-
 }

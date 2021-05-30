@@ -25,7 +25,7 @@ public class Film {
     @OneToMany(mappedBy = "actor")
     private List<FilmActor> actorByFilmActorId;
 
-    @OneToMany(mappedBy = "actor")
+    @OneToMany(mappedBy = "film")
     private List<FilmActor> filmByFilmActorId;
 
     @Id
